@@ -18,6 +18,7 @@ builder.Services.AddDbContext<FinalProjectContext>(options =>
 builder.Services.AddMemoryCache();
 
 builder.Services.AddScoped<IActividadServices, ActividadServices>();
+builder.Services.AddScoped<IPersonaServices, PersonaServices>();
 
 var app = builder.Build();
 
