@@ -28,4 +28,6 @@ public partial class ViewPersona
 
     [Column(TypeName = "date")]
     public DateTime? FechaDeCreacion { get; set; }
+
+    public bool? Estado { get; set; }
 }

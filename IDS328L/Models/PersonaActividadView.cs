@@ -27,4 +27,6 @@ public partial class PersonaActividadView
 
     [StringLength(50)]
     public string? Direccion { get; set; }
+
+    public bool? Estado { get; set; }
 }

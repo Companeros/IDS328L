@@ -1,4 +1,5 @@
 using IDS328L.Models;
+using IDS328L.Services;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -15,6 +16,8 @@ var apikey = builder.Configuration["ConnectionStrings:FinalProject"];
 builder.Services.AddDbContext<FinalProjectContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("FinalProject")));
 builder.Services.AddMemoryCache();
+
+builder.Services.AddScoped<IActividadServices, ActividadServices>();
 
 var app = builder.Build();
 

@@ -19,4 +19,6 @@ public partial class ViewActividad
 
     [Column(TypeName = "date")]
     public DateTime? FechaCreado { get; set; }
+
+    public bool? Estadi { get; set; }
 }
