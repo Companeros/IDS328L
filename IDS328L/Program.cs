@@ -19,6 +19,7 @@ builder.Services.AddMemoryCache();
 
 builder.Services.AddScoped<IActividadServices, ActividadServices>();
 builder.Services.AddScoped<IPersonaServices, PersonaServices>();
+builder.Services.AddScoped<IPersonaActividadServices, PersonaActividadServicies>();
 
 var app = builder.Build();
 
