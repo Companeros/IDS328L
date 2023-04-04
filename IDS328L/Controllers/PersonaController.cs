@@ -40,7 +40,7 @@ namespace CORE_Api_Pymes.Controllers
             }
             else
             {
-                return Ok();
+                return BadRequest();
             }
         }
         #endregion
