@@ -29,12 +29,13 @@ namespace IDS328L.Services
 
 
         #region This method return one record or a list of elements from personaactividadTable
-        public Response<PersonaActividadView> Get(int Operacion, int Id, int Estado)
+
+        public Response<PersonaActividadView> Get(int Operacion, int Id, bool Estado)
         {
             var Result = new Response<PersonaActividadView>();
             try
             {
-                if(Operacion == 0)
+                if (Operacion == 0)
                 {
                     Result.Errors.Add(string.Format(" Valor 'Operación' inválido."));
                 }
@@ -44,18 +45,13 @@ namespace IDS328L.Services
                     Result.DataList = Data;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string Mensaje = ex.Message;
                 Result.Errors.Add(string.Format("El método obtener actividad está presentando errores, favor verificar el log."));
 
             }
             return Result;
-        }
-
-        public Response<PersonaActividadView> Get(int Operacion, int Id, bool Estado)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
@@ -127,7 +123,7 @@ namespace IDS328L.Services
             }
             catch (System.Exception ex)
             {
-                Result.Errors.Add(string.Format("Ha ocurrido un error inactivando un registro de 'Persona_Actividad'." + ex));
+                Result.Errors.Add(string.Format("Ha ocurrido un error inactivando un registro de 'Persona_Actividad '." + ex));
             }
             return Result;
         }
