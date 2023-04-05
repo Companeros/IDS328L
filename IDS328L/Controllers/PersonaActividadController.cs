@@ -5,6 +5,8 @@ using IDS328L.Services;
 
 namespace IDS328L.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class PersonaActividadController : ControllerBase
     {
         private readonly IPersonaActividadServices _IServices;
