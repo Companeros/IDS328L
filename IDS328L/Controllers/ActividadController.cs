@@ -29,7 +29,6 @@ namespace CORE_Api_Pymes.Controllers
         #endregion
 
         // Esto es un comentario indefenso de prueba únicamente
-        // Otro comentario inofensivo
 
         #region[HttpPost] Actividad Requests
         [HttpPost]
