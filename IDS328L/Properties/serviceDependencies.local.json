@@ -2,6 +2,12 @@
   "dependencies": {
     "secrets1": {
       "type": "secrets.user"
+    },
+    "secrets2": {
+      "secretStore": null,
+      "resourceId": null,
+      "type": "secrets.user",
+      "connectionId": null
     }
   }
 }
