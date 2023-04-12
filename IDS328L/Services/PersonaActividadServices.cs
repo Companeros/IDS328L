@@ -74,7 +74,7 @@ namespace IDS328L.Services
             }
             catch (Exception ex)
             {
-                Result.Errors.Add(string.Format("Ha ocurrido un error insertando un nuevo registro en 'Persona_Actividad'"));
+                Result.Errors.Add(string.Format("Ha ocurrido un error insertando un nuevo registro en 'Persona_Actiidad'"));
             }
             return Result;
         }
