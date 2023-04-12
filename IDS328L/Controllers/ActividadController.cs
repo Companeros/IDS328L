@@ -35,6 +35,8 @@ namespace CORE_Api_Pymes.Controllers
         }
         #endregion
 
+        // Esto es un comentario indefenso de prueba únicamente
+
         #region[HttpPost] Actividad Requests
         [HttpPost]
         public ActionResult Post(ActividadEntities ActividadEntities)
