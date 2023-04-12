@@ -24,7 +24,15 @@ namespace CORE_Api_Pymes.Controllers
         public ActionResult Get(int Operacion = 1, int Id = 0, bool Estado = true)
         {
             var result = _IServices.Get(Operacion, Id, Estado);
-            return Ok(result);
+            if (result.Succeded == false)
+            {
+                return BadRequest(result);
+            }
+            else
+            {
+                return Ok(result);
+            }
+
         }
         #endregion
 
@@ -49,9 +57,17 @@ namespace CORE_Api_Pymes.Controllers
         [HttpPut]
         public ActionResult Put(PersonaEntities PersonaEntities)
         {
-            var Result = _IServices.Put(PersonaEntities);
+            var result = _IServices.Put(PersonaEntities);
 
-            return Ok(Result);
+            if (result.Succeded == false)
+            {
+                return BadRequest(result);
+            }
+            else
+            {
+                return Ok(result);
+            }
+
         }
         #endregion
 
@@ -61,7 +77,15 @@ namespace CORE_Api_Pymes.Controllers
         {
             var result = _IServices.Delete(Id);
 
-            return Ok(result);
+
+            if (result.Succeded == false)
+            {
+                return BadRequest(result);
+            }
+            else
+            {
+                return Ok(result);
+            }
         }
         #endregion
     }

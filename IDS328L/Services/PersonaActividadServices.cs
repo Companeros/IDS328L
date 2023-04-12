@@ -38,6 +38,7 @@ namespace IDS328L.Services
                 if (Operacion == 0)
                 {
                     Result.Errors.Add(string.Format(" Valor 'Operación' inválido."));
+                    
                 }
                 else
                 {
@@ -49,7 +50,7 @@ namespace IDS328L.Services
             {
                 string Mensaje = ex.Message;
                 Result.Errors.Add(string.Format("El método obtener actividad está presentando errores, favor verificar el log."));
-
+                
             }
             return Result;
         }

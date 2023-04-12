@@ -21,8 +21,16 @@ namespace IDS328L.Controllers
         [HttpGet]
         public ActionResult Get(int Operacion = 1, int Id = 0, bool Estado = true)
         {
+            
             var result = _IServices.Get(Operacion, Id, Estado);
-            return Ok(result);
+            if(result.Succeded == false)
+            {
+                return BadRequest(result);
+            }
+            else
+            {
+                return Ok(result);
+            }
         }
         #endregion
 
@@ -33,7 +41,15 @@ namespace IDS328L.Controllers
             if(_IServices != null)
             {
                 var result = _IServices.Post(PersonaActividadEntities);
+                if (result.Succeded)
+                {
+
                 return Ok(result);
+                }
+                else
+                {
+                    return BadRequest(result);
+                }
             }
             else
             {
@@ -46,8 +62,16 @@ namespace IDS328L.Controllers
         [HttpPut]
         public ActionResult Put(PersonaActividadEntities PersonaActividadEntities)
         {
-            var Result = _IServices.Put(PersonaActividadEntities);
-            return Ok(Result);
+            var result = _IServices.Put(PersonaActividadEntities);
+            if (!result.Succeded)
+            {
+                return BadRequest(result);
+            }
+            else
+            {
+                return Ok(result);
+            }
+            
         }
         #endregion
 
@@ -56,8 +80,15 @@ namespace IDS328L.Controllers
         public ActionResult Delete(int Id)
         {
             var result = _IServices.Delete(Id);
-
-            return Ok(result);
+            if (!result.Succeded)
+            {
+                return BadRequest(result);
+            }
+            else
+            {
+                return Ok(result);
+            }
+            
         }
         #endregion
     }
