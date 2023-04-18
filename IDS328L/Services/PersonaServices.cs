@@ -102,7 +102,7 @@ namespace IDS328L.Services
                 }
                 else
                 {
-                    Context.Database.ExecuteSqlInterpolated($"[dbo].[PP_SetPersona] 2, {PersonaEntities.Nombre}, {PersonaEntities.Apellido}, {PersonaEntities.Cedula},{PersonaEntities.Telefono},{PersonaEntities.Direccion},{PersonaEntities.Id}");
+                    Context.Database.ExecuteSqlInterpolated($"[dbo].[PP_SetPersona] 2, {PersonaEntities.Nombre}, {PersonaEntities.Apellido}, {PersonaEntities.Cedula},{PersonaEntities.Telefono},{PersonaEntities.Direccion},{PersonaEntities.Id},{PersonaEntities.Estado}");
                 }
             }
             catch (Exception ex)
