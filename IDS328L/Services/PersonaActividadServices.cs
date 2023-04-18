@@ -105,7 +105,7 @@ namespace IDS328L.Services
         }
         #endregion
 
-        #region
+        #region This method delete a record from the PersonaActividad table
         public Response Delete(int Id)
         {
             var Result = new Response();
@@ -119,7 +119,7 @@ namespace IDS328L.Services
                 else
                 {
                     var Error = new SqlParameter("@Message", SqlDbType.Int) { Direction = ParameterDirection.Output };
-                    Context.Database.ExecuteSqlInterpolated($"[dbo].[PP_SetPersona_Actividad] 3, {""} ,'2001-01-01', {Id}");
+                    Context.Database.ExecuteSqlInterpolated($"[dbo].[PP_SetPersona_Actividad] 3,1,1, {Id}");
                 }
             }
             catch (System.Exception ex)
