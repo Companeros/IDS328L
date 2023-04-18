@@ -78,7 +78,7 @@ namespace IDS328L.Services
                 }
                 else
                 {
-                    Context.Database.ExecuteSqlInterpolated($"[dbo].[PP_SetPersona] 1,{PersonaEntities.Nombre},{PersonaEntities.Apellido},{PersonaEntities.Cedula},{PersonaEntities.Telefono},{PersonaEntities.Direccion},{PersonaEntities.Id}");
+                    Context.Database.ExecuteSqlInterpolated($"[dbo].[PP_SetPersona] 1,{PersonaEntities.Nombre},{PersonaEntities.Apellido},{PersonaEntities.Cedula},{PersonaEntities.Telefono},{PersonaEntities.Direccion},{PersonaEntities.Id},{PersonaEntities.Estado}");
                 }
             }
             catch (Exception ex)
@@ -127,7 +127,7 @@ namespace IDS328L.Services
                 else
                 {
                     var Error = new SqlParameter("@Message", SqlDbType.Int) { Direction = ParameterDirection.Output };
-                    Context.Database.ExecuteSqlInterpolated($"[dbo].[PP_SetPersona] 3, {""} ,{""},{""},{""},{""},{Id}");
+                    Context.Database.ExecuteSqlInterpolated($"[dbo].[PP_SetPersona] 3, {""} ,{""},{""},{""},{""},{Id},1");
                 }
             }
             catch (System.Exception ex)
