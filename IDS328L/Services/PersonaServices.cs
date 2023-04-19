@@ -23,7 +23,7 @@ namespace IDS328L.Services
         {
             Context = _Context;
         }
-        // Esto es un comentario mejorado
+        // Esto es un comentario mejorado 2.0
 
         #region This method return one record or List of Persons
         public Response<ViewPersona> Get(int Operacion, int Id, bool Estado)
